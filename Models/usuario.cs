@@ -42,41 +42,7 @@ namespace exemplo.Models
 
         }
 
-        public void CriarPastaEArquivo(string _caminho)
-        {
-
-            string pasta = _caminho.Split("/")[0];
-            string arquivo = _caminho.Split("/")[1];
-
-            if (!Directory.Exists(pasta))
-            {
-                Directory.CreateDirectory(pasta);
-            }
-
-            if (!File.Exists(_caminho))
-            {
-                File.Create(_caminho).Close();
-            }
-        }
-
-        private const string CAMINHO = "Database/Usuario.csv";
-
-         private string Preparar(Usuario u){
-            return $";{u.Email};{u.Nome};{u.Senha};";
-        }
-
-
-        public Usuario()
-        {
-            CriarPastaEArquivo(CAMINHO);
-
-        }
-
-        public void Cadastrar(Usuario u)
-        {
-            string[] linha = { Preparar(u) };
-            File.AppendAllLines(CAMINHO, linha);
-        }
+        
 
 
     }

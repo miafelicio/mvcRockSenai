@@ -23,10 +23,9 @@ namespace mvc_rockINsenai.Controllers
                 x.Split(";")[1] == form["E-mail"] &&
                 x.Split(";")[2] == form["Senha"]
             );
-            Console.WriteLine($"Text");
             
-            Console.WriteLine(logado);
-            Console.WriteLine(logado.Split(";")[1]);
+          
+            
             
             
 
